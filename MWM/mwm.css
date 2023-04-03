@@ -1,0 +1,261 @@
+/* COLORES */
+:root {
+  --color-primario: #e5e5e5;
+  --color-secundario: #0f1626;
+  --color-marca: #0258a9;
+  --color-destacado: #ffd600;
+  --color-boton: #005f54;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  display: none;
+}
+
+html {
+  background-color: var(--color-primario);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* HEADER */
+header {
+  background-color: var(--color-primario);
+  box-shadow: 0 1px 2px var(--color-secundario);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  margin: auto;
+}
+
+header img {
+  height: 60px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu li {
+  margin: 0 1rem;
+}
+
+.menu a {
+  color: var(--color-marca);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: var(--color-destacado);
+}
+
+/* HERO */
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 0 0;
+}
+
+#hero img {
+  position: relative;
+  width: 100vw;
+  height: 75vh;
+}
+
+#hero h1 {
+  position: absolute;
+  z-index: 1;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--color-marca);
+}
+
+/* NOSOTROS */
+#nosotros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+#nosotros img {
+  max-width: 50%;
+  margin-left: 2rem;
+}
+
+#nosotros .texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+#nosotros h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#nosotros p {
+  margin-bottom: 2rem;
+}
+
+/* SERVICIOS */
+#servicios {
+  display: flex;
+  flex-direction: column;
+}
+
+#servicios h2 {
+  display: flex;
+  justify-content: center;
+}
+
+#servicios .cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 15px;
+  padding: 15px;
+}
+
+.servicio {
+  border: 1px solid var(--color-marca);
+  border-radius: 5px;
+  box-shadow: 0 2px 2px var(--color-secundario);
+  margin: 0 15px;
+  padding: 20px;
+  width: 250px;
+}
+
+.servicio h3 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.servicio p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.servicio ul {
+  margin-bottom: 0;
+}
+
+.servicio li {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* CONTACTO */
+#contacto {
+  background-color: var(--color-primario);
+  padding: 80px 0;
+}
+
+#contacto h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+#contacto p {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#contacto form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contacto label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#contacto input[type="text"],
+#contacto input[type="email"],
+#contacto textarea {
+  width: 100%;
+  font-size: 18px;
+  padding: 12px 20px;
+  border: 1px solid var(--color-secundario);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+#contacto input[type="submit"] {
+  background-color: var(--color-boton);
+  color: var(--color-primario);
+  font-size: 18px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#contacto input[type="submit"]:hover {
+  color: var(--color-secundario);
+  background-color: var(--color-destacado);
+}
+
+#contacto input[type="submit"]:active {
+  background-color: var(--color-boton);
+}
+
+footer {
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid var(--color-secundario);
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
