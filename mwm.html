@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Somos tu empresa de Marketing Digital" />
+    <meta name="author" content="Zingaretti Marcos" />
+    <meta name="keywords" content="marketing digital" />
+    <title>MediaWebMarket</title>
+    <link
+      rel="stylesheet"
+      media="screen and (orientation:portrait)"
+      href="mwm-port.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (orientation:landscape)"
+      href="mwm-land.css"
+    />
+    <script src="mwm.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="navbar">
+          <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>
+            <div class="menu-items">
+              <li><a href="#">Home</a></li>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <img
+        src="logo_MWM_transparente.png"
+        alt="nuestro logo MWM MediaWebMarket"
+      />
+
+      <nav class="contenedor">
+        <div class="menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <img src="estadistics.jpg" alt="imagen del hero con estadisticas" />
+      <h1>Bienvenido al futuro del MARKETING DIGITAL</h1>
+    </section>
+
+    <section id="nosotros">
+      <img
+        src="working.jpg"
+        alt="imagen de persona trabajando en computadora"
+      />
+      <div class="texto">
+        <h2>Nosotros</h2>
+        <p>
+          Somos una empresa de Marketing Digital dedicada a ayudar a nuestros
+          clientes a alcanzar sus objetivos en línea. Ofrecemos una amplia gama
+          de servicios, desde estrategias de SEO y PPC hasta diseño y desarrollo
+          web.
+        </p>
+        <p>
+          Nuestro equipo de profesionales altamente capacitados tiene años de
+          experiencia en el campo del marketing digital, y trabajamos arduamente
+          para mantenernos actualizados en las últimas tendencias y técnicas.
+        </p>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <h2>Servicios</h2>
+      <div class="cards">
+        <div class="servicio">
+          <h3>Optimización de motores de búsqueda (SEO)</h3>
+          <p>
+            Ayudamos a nuestros clientes a mejorar su visibilidad en los
+            resultados de búsqueda orgánica mediante la optimización de su sitio
+            web y la creación de contenido de calidad.
+          </p>
+        </div>
+        <div class="servicio">
+          <h3>Publicidad en motores de búsqueda (PPC)</h3>
+          <p>
+            Creamos y gestionamos campañas publicitarias en motores de búsqueda
+            como Google y Bing para maximizar el retorno de inversión de
+            nuestros clientes.
+          </p>
+        </div>
+        <div class="servicio">
+          <h3>Diseño y desarrollo web</h3>
+          <p>
+            Creamos sitios web atractivos y eficaces que se ajustan a las
+            necesidades y objetivos de nuestros clientes.
+          </p>
+        </div>
+        <div class="servicio">
+          <h3>Marketing de contenido</h3>
+          <p>
+            Creamos y distribuimos contenido relevante y valioso para atraer y
+            retener a una audiencia claramente definida y, en última instancia,
+            impulsar la rentabilidad de nuestros clientes.
+          </p>
+        </div>
+        <div class="servicio">
+          <h3>Marketing en redes sociales</h3>
+          <p>
+            Creamos y gestionamos campañas publicitarias en redes sociales como
+            Facebook, Instagram, Twitter y LinkedIn para aumentar la visibilidad
+            y el engagement de nuestros clientes en estas plataformas.
+          </p>
+        </div>
+        <div class="servicio">
+          <h3>Analítica web</h3>
+          <p>
+            Utilizamos herramientas de análisis web para recopilar y analizar
+            datos sobre el comportamiento de los usuarios en los sitios web de
+            nuestros clientes, lo que nos permite optimizar su rendimiento y
+            mejorar la experiencia del usuario.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>
+        ¡Gracias por visitar nuestro sitio web! Si tienes alguna pregunta o
+        comentario, por favor no dudes en contactarnos. Puedes enviarnos un
+        correo electrónico a info@mediawebmarket.com, o llenar el formulario de
+        contacto a continuación y nos pondremos en contacto contigo lo antes
+        posible.
+      </p>
+      <form action="formulario.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+
+        <input type="submit" value="Enviar" />
+      </form>
+    </section>
+  </body>
+  <footer>
+    <p>© 2023 MWM MediaWebMarket. Todos los derechos reservados.</p>
+  </footer>
+</html>
