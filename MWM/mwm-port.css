@@ -1,0 +1,363 @@
+/* COLORES */
+:root {
+  --color-primario: #e5e5e5;
+  --color-secundario: #0f1626;
+  --color-marca: #0258a9;
+  --color-destacado: #ffd600;
+  --color-boton: #005f54;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  display: none;
+}
+
+html {
+  background-color: var(--color-primario);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* HEADER */
+header {
+  background-color: var(--color-primario);
+  box-shadow: 0 1px 2px var(--color-secundario);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  margin: auto;
+}
+
+header img {
+  height: 60px;
+}
+
+nav .menu {
+  display: none;
+}
+
+.container {
+  max-width: 1050px;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+
+.navbar .menu-items {
+  display: flex;
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: #0e2431;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+}
+
+.navbar .nav-container a:hover {
+  font-weight: bolder;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
+}
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  padding-top: 120px;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+  height: 100vh;
+  width: 100%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  margin-left: -40px;
+  padding-left: 50px;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+}
+
+.navbar .menu-items li {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.logo {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: #0e2431;
+}
+
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .logo {
+  display: none;
+}
+
+/* HERO */
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 0 0;
+}
+
+#hero img {
+  position: relative;
+  width: 100vw;
+  height: 75vh;
+}
+
+#hero h1 {
+  position: absolute;
+  z-index: 1;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--color-marca);
+}
+
+/* NOSOTROS */
+#nosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+#nosotros img {
+  max-width: 100%;
+  margin-left: 0;
+}
+
+#nosotros .texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+#nosotros h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#nosotros p {
+  margin-bottom: 2rem;
+}
+/* SERVICIOS */
+#servicios {
+  display: flex;
+  flex-direction: column;
+}
+
+#servicios h2 {
+  display: flex;
+  justify-content: center;
+}
+
+#servicios .cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 15px;
+  padding: 15px;
+}
+
+.servicio {
+  border: 1px solid var(--color-marca);
+  border-radius: 5px;
+  box-shadow: 0 2px 2px var(--color-secundario);
+  margin: 0 15px;
+  padding: 20px;
+  width: 250px;
+}
+
+.servicio h3 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.servicio p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.servicio ul {
+  margin-bottom: 0;
+}
+
+.servicio li {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* CONTACTO */
+#contacto {
+  background-color: var(--color-primario);
+  padding: 80px 0;
+}
+
+#contacto h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+#contacto p {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#contacto form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contacto label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#contacto input[type="text"],
+#contacto input[type="email"],
+#contacto textarea {
+  width: 100%;
+  font-size: 18px;
+  padding: 12px 20px;
+  border: 1px solid var(--color-secundario);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+#contacto input[type="submit"] {
+  background-color: var(--color-boton);
+  color: var(--color-primario);
+  font-size: 18px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#contacto input[type="submit"]:hover {
+  background-color: var(--color-destacado);
+}
